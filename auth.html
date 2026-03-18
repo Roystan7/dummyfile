@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #082a44;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #0e3a5b;
+            padding: 50px;
+            width: 420px;
+            border-radius: 18px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 12px;
+            border: none;
+            font-size: 17px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #14bef0;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .toggle {
+            cursor: pointer;
+            color: #63d7ff;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h2>Secure CCTV Access</h2>
+
+    <!-- LOGIN -->
+    <div id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button id="loginBtn">LOGIN</button>
+
+        <div class="toggle" id="showRequest">Request Access</div>
+        <div class="toggle" onclick="location.href='otp.html'">Enter OTP</div>
+
+        <p id="msg"></p>
+    </div>
+
+    <!-- REQUEST ACCESS -->
+    <div id="requestForm" style="display:none;">
+        <input type="email" id="reqEmail" placeholder="Your Email">
+        <button id="requestBtn">Send Request</button>
+
+        <div class="toggle" id="backLogin">Back</div>
+        <p id="msg2"></p>
+    </div>
+
+</div>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>

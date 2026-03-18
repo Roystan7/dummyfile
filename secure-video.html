@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Encrypted Video Stream</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #videoArea { display: flex; gap: 30px; }
+        .panel { text-align: center; }
+        video, canvas {
+            width: 380px; height: 280px;
+            border: 1px solid black;
+            background: black;
+        }
+
+        #saveBtn {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Secure Encrypted Video Stream</h2>
+
+<div id="videoArea">
+
+    <div class="panel">
+        <h4>Raw Feed</h4>
+        <video id="video" autoplay></video>
+    </div>
+
+    <div class="panel">
+        <h4>Decrypted Feed</h4>
+        <canvas id="display" width="380" height="280"></canvas>
+    </div>
+
+    <div class="panel">
+        <h4>Attacker View</h4>
+        <canvas id="attackerCanvas" width="380" height="280"></canvas>
+    </div>
+
+</div>
+
+<br>
+<button id="saveBtn">Save Synopsis (MP4)</button>
+
+<script type="module" src="secure-video.js"></script>
+
+</body>
+</html>

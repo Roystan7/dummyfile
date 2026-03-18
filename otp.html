@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter OTP</title>
+    <style>
+        body {
+            background:#082a44;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            color:white;
+            font-family:Arial;
+        }
+        .box {
+            background:#0e3a5b;
+            padding:40px;
+            width:350px;
+            border-radius:12px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <h2>OTP Verification</h2>
+
+    <input id="email" placeholder="Your Email"><br><br>
+    <input id="otp" placeholder="OTP"><br><br>
+    <button id="verifyBtn">Verify OTP</button>
+
+    <p id="msg"></p>
+</div>
+
+<script type="module" src="otp.js"></script>
+
+</body>
+</html>
